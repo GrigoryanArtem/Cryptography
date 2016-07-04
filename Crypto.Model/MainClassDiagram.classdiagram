@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="e718e0c1-e12f-4593-b1f2-618c4a2e84ef" name="MainClassDiagram" linkedPackageId="3cf943a5-1c1f-4756-a0c9-68b38146e30d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="da8e5caa-28c5-4359-9181-d60c2dfda390">
+      <profileInstance Id="59015f0b-ea97-4251-8d39-c9101b31ef39" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="440bcbef-2d06-49bb-a82b-325293cc47fb">
+      <profileInstance Id="6c81348d-c57c-45c7-900b-9b47ceb614a7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="a2204113-a50e-4913-b2eb-9c20805b81a2" name="Symmetric">
+        <elementDefinition Id="4dd40f73-54b7-4652-80a6-5f45c0930bc1" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="7f850a63-8d50-43c7-bd38-9d09252134af" name="SymmetricAlgorithm" isAbstract="true" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5ed2092f-2b78-4a39-9e40-8c6d91ccb816" />
+              <suppliersInternal>
+                <dependency Id="2d44aa8f-1217-41ca-b2ab-8280cb506fe2">
+                  <interfaceMoniker Id="7ad45f9f-978a-43fd-9a1b-2779ea07af74" LastKnownName="CipherMode" />
+                  <elementDefinition Id="af9380d0-bda5-459f-96a2-6bdb805c30e3" />
+                </dependency>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="22e483b8-30fd-46e0-9c7d-11c42bf71fe9" name="Encrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2e4a4356-d79a-469a-a384-1c2931abe4f0" />
+                </operation>
+                <operation Id="afb619b7-b643-47e6-9aac-af61cc33638d" name="Decrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="175d8125-4838-456e-a2c7-34942a785091" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="545d5f3c-f3c8-4bdf-875d-044a71818b35" name="AES" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="cf41f569-455c-4ee5-bce0-730132bc2cb5" />
+              <generalsInternal>
+                <generalization Id="020c13a3-5a8d-4384-b6c1-8996b8b793c1" isSubstitutable="false">
+                  <classMoniker Id="7f850a63-8d50-43c7-bd38-9d09252134af" LastKnownName="SymmetricAlgorithm" />
+                  <elementDefinition Id="350b59b8-b121-41d7-9239-ee64837b4621" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="43495060-5865-46ee-aef6-8a0455bb3656" name="DES" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="104c8f41-e2f5-437a-81e6-69a61e8f978a" />
+              <generalsInternal>
+                <generalization Id="ad55b1e9-2862-449d-b635-6236c607c45f" isSubstitutable="false">
+                  <classMoniker Id="7f850a63-8d50-43c7-bd38-9d09252134af" LastKnownName="SymmetricAlgorithm" />
+                  <elementDefinition Id="0a2e1ba4-b2a2-4c98-976f-b1dcd699113a" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="7ad45f9f-978a-43fd-9a1b-2779ea07af74" name="CipherMode" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="c9cb16f5-9e77-47cf-8d4f-4d6cfa73e206" />
+              <ownedOperations>
+                <operation Id="aaeaeaf7-cb72-45e3-9f9b-a1b7a8c7b69a" name="Decrypt" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c7171ed4-8c3a-425f-8c4d-a73dfb79e70c" />
+                </operation>
+                <operation Id="a500230e-942e-408d-a331-1ca23ae9136f" name="Encrypt" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="38f778d2-1835-4ebc-be4a-ff8b065c6ecd" />
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b5411cc4-3254-431b-bc9c-bdeadfc497a5" name="ElectronicCodeBook " isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="faa37557-e622-4f6c-8569-3bc441857e2e" />
+              <suppliersInternal>
+                <interfaceRealization Id="7bab52a6-e43d-4eb9-a063-8699c077f32c">
+                  <interfaceMoniker Id="7ad45f9f-978a-43fd-9a1b-2779ea07af74" LastKnownName="CipherMode" />
+                  <elementDefinition Id="d5cac423-3a00-4f29-b9cf-c765598b5bcb" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="2a02bfb1-ad49-4059-9e94-3c4ba0105e5b" name="Decrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bcb1ea05-84aa-41ba-924b-f151b1d24ee8" />
+                </operation>
+                <operation Id="edd77b5f-a0c1-4bc0-bb9e-21bd90a684b7" name="Encrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="aa0826b0-a576-488b-a2a4-c06e4f508263" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a1c0e9ad-1158-4b9c-842e-d59c06278870" name="CipherBlockChaining " isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5160a4dc-eb0c-454a-85e1-dff0fe5a7708" />
+              <generalsInternal>
+                <generalization Id="6650772d-0d85-4b18-b096-9e645fa70637" isSubstitutable="false">
+                  <classMoniker Id="161723ca-facb-401b-8398-a975afc74ee6" LastKnownName="CipherModeIV" />
+                  <elementDefinition Id="7ecb881e-64d3-4eab-b227-f59a103ec98b" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="161723ca-facb-401b-8398-a975afc74ee6" name="CipherModeIV" isAbstract="true" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="032e15cf-14cd-46b7-bfe9-96faa5ac0981" />
+              <suppliersInternal>
+                <interfaceRealization Id="730d945b-9263-42d1-b0cc-c137d43f8a9b">
+                  <interfaceMoniker Id="7ad45f9f-978a-43fd-9a1b-2779ea07af74" LastKnownName="CipherMode" />
+                  <elementDefinition Id="f98f1ed0-62c7-42cc-a4ce-8e3ab5e4c147" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedAttributesInternal>
+                <property Id="f3003648-6b2e-4eeb-a3e2-08558fcc1870" name="mInitializationVector" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0ceebfd1-63de-472a-9ef4-5e9f5b1f03bf" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="1883c461-3bf4-4c0e-80d9-f8da31554932" name="Decrypt" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5c93957f-4455-42a1-a0dd-722374edcc83" />
+                </operation>
+                <operation Id="6c509fc8-baf4-49b7-a60c-8ef6b7444a5f" name="Encrypt" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="185131da-3c53-47da-9d40-edcbeef53f29" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="cce0aaf4-abd2-4972-ad5f-d044c6263704" name="PropagatingCipherBlockChaining " isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c065db06-6a74-493a-8298-c3cca65fef5d" />
+              <generalsInternal>
+                <generalization Id="fdd00431-6270-42f1-9f73-b50d5fe3fdc4" isSubstitutable="false">
+                  <classMoniker Id="161723ca-facb-401b-8398-a975afc74ee6" LastKnownName="CipherModeIV" />
+                  <elementDefinition Id="3b781d94-c3fe-4eeb-b8a1-2735bfcd78d2" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="3bc71a47-e956-4d2e-9536-8962b99a5aaa" name="Generators">
+        <elementDefinition Id="1b879668-ea29-4d72-b9b8-302fc5a521f0" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="42851a2a-8dc3-4956-b664-017946ed2ab4" name="KeyGenerator" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="9dfd5a67-b181-42ec-a0a6-8127235b168f" />
+              <suppliersInternal>
+                <dependency Id="916681e9-6a72-4657-ad0a-dd7bb51f1ed0">
+                  <classMoniker Id="9a0641a5-7d0e-4b4a-b80a-844798a15ac9" LastKnownName="GeneratorMode" />
+                  <elementDefinition Id="cef85e28-d0d3-4a1a-8d6d-a6179cc7f9e9" />
+                </dependency>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="9a0641a5-7d0e-4b4a-b80a-844798a15ac9" name="GeneratorMode" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7cd4f88c-5269-4d45-8e3b-2ad902d1ab65" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="3b9e01f3-ef66-41bb-b4e8-45bd50161a9c" name="Prime">
+              <elementDefinition Id="54ee8adb-2cb4-496d-8123-03d902710e4a" />
+            </package>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="3cf943a5-1c1f-4756-a0c9-68b38146e30d" name="Crypto.Model">
+    <elementDefinition Id="d4a6599e-48fe-4ae8-bbb1-e7955f0c6475" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,63 @@
+﻿<Controls:MetroWindow x:Class="Crypto.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Crypto.UI"
+        xmlns:Views="clr-namespace:Crypto.UI.Views"
+        mc:Ignorable="d"
+        Title="Cryptography" 
+        Height="289" Width="635" 
+        Icon="Resources/Title.ico"
+        MinWidth="200" MinHeight="200"
+        BorderThickness="0" 
+        GlowBrush="Black"
+        ResizeMode="CanResizeWithGrip"
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen" >
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Menu 
+                 Style="{StaticResource TopMenu}">
+
+                <MenuItem  
+                    x:Name="mLanguageMenu"
+                    Style="{StaticResource TopMenuItem}"                                      
+                    Header="{DynamicResource mLanguage}" />
+            </Menu>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <DockPanel 
+        LastChildFill="True">
+
+        <StackPanel 
+            Style="{StaticResource StackPanelFooter}"
+            DockPanel.Dock="Bottom" >
+
+            <TextBlock 
+                Style="{StaticResource TextBlockFooter}" 
+                Text="{DynamicResource mCopyRight}" />
+        </StackPanel>
+
+        <TabControl>
+            <Controls:MetroTabItem  
+                    Header="{DynamicResource mSymmetric}" 
+                    IsSelected="True">
+                <Views:Symmetric DataContext="{Binding}" />
+            </Controls:MetroTabItem>
+
+            <Controls:MetroTabItem 
+                    Header="{DynamicResource mAsymmetric}">
+                <Views:Asymmetric DataContext="{Binding}" />
+            </Controls:MetroTabItem>
+
+            <Controls:MetroTabItem  
+                    Header="{DynamicResource mHashFunctions}">
+                <Views:HashFunctions DataContext="{Binding}" />
+            </Controls:MetroTabItem>
+        </TabControl>
+    </DockPanel>
+</Controls:MetroWindow>

@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Crypto.UI.Resources"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="mSymmetric">Symmetric</v:String>
+    <v:String x:Key="mAsymmetric">Asymmetric</v:String>
+    <v:String x:Key="mHashFunctions">Hash functions</v:String>
+    <v:String x:Key="mCopyRight">© 2016 Grigoryan Artem</v:String>
+    <v:String x:Key="mSettings">Settings</v:String>
+    <v:String x:Key="mAlgorithm">Algorithm</v:String>
+    <v:String x:Key="mCipherMode">Cipher Mode</v:String>
+    <v:String x:Key="mGeneratorMode">Generator Mode</v:String>
+    <v:String x:Key="mInputFile">Input File</v:String>
+    <v:String x:Key="mOutputFile">Output File</v:String>
+    <v:String x:Key="mKey">Key</v:String>
+    <v:String x:Key="mInitializationVector">Initialization Vector</v:String>
+    <v:String x:Key="mLanguage">Language</v:String>
+    <v:String x:Key="mInputFilePath">Input file path...</v:String>
+    <v:String x:Key="mOutputFilePath">Output file path...</v:String>
+    <v:String x:Key="mEnterKey">Enter key</v:String>
+    <v:String x:Key="mEnterInitializationVector">Enter initialization vector</v:String>
+    <v:String x:Key="mTest">Test</v:String>
+    <v:String x:Key="mEncrypt">Encrypt</v:String>
+    <v:String x:Key="mDecrypt">Decrypt</v:String>
+    <v:String x:Key="mGenerateKeys">Generate Keys</v:String>
+    <v:String x:Key="mPublicKey">Public key</v:String>
+    <v:String x:Key="mPrivateKey">Private key</v:String>
+    <v:String x:Key="mPublicKeyPath">Public key path...</v:String>
+    <v:String x:Key="mPrivateKeyPath">Private key path...</v:String>
+    <v:String x:Key="mKeyLength">Key length</v:String>
+    <v:String x:Key="mHash">Hash</v:String>
+</ResourceDictionary>

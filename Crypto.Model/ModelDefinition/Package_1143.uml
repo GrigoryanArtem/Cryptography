@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4dd40f73-54b7-4652-80a6-5f45c0930bc1"
+  name="Symmetric" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5ed2092f-2b78-4a39-9e40-8c6d91ccb816"
+        name="SymmetricAlgorithm"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="af9380d0-bda5-459f-96a2-6bdb805c30e3">
+            <interfaceMoniker
+              Id="c9cb16f5-9e77-47cf-8d4f-4d6cfa73e206"
+              LastKnownName="CipherMode"
+              LastKnownLocation="Package_1143.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2e4a4356-d79a-469a-a384-1c2931abe4f0"
+            name="Encrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="175d8125-4838-456e-a2c7-34942a785091"
+            name="Decrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cf41f569-455c-4ee5-bce0-730132bc2cb5"
+        name="AES"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="350b59b8-b121-41d7-9239-ee64837b4621"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5ed2092f-2b78-4a39-9e40-8c6d91ccb816"
+              LastKnownName="SymmetricAlgorithm"
+              LastKnownLocation="Package_1143.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="104c8f41-e2f5-437a-81e6-69a61e8f978a"
+        name="DES"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="0a2e1ba4-b2a2-4c98-976f-b1dcd699113a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5ed2092f-2b78-4a39-9e40-8c6d91ccb816"
+              LastKnownName="SymmetricAlgorithm"
+              LastKnownLocation="Package_1143.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c9cb16f5-9e77-47cf-8d4f-4d6cfa73e206"
+        name="CipherMode"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="c7171ed4-8c3a-425f-8c4d-a73dfb79e70c"
+            name="Decrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="38f778d2-1835-4ebc-be4a-ff8b065c6ecd"
+            name="Encrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="faa37557-e622-4f6c-8569-3bc441857e2e"
+        name="ElectronicCodeBook "
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="d5cac423-3a00-4f29-b9cf-c765598b5bcb">
+            <interfaceMoniker
+              Id="c9cb16f5-9e77-47cf-8d4f-4d6cfa73e206"
+              LastKnownName="CipherMode"
+              LastKnownLocation="Package_1143.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bcb1ea05-84aa-41ba-924b-f151b1d24ee8"
+            name="Decrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="aa0826b0-a576-488b-a2a4-c06e4f508263"
+            name="Encrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5160a4dc-eb0c-454a-85e1-dff0fe5a7708"
+        name="CipherBlockChaining "
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="7ecb881e-64d3-4eab-b227-f59a103ec98b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="032e15cf-14cd-46b7-bfe9-96faa5ac0981"
+              LastKnownName="CipherModeIV"
+              LastKnownLocation="Package_1143.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="032e15cf-14cd-46b7-bfe9-96faa5ac0981"
+        name="CipherModeIV"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f98f1ed0-62c7-42cc-a4ce-8e3ab5e4c147">
+            <interfaceMoniker
+              Id="c9cb16f5-9e77-47cf-8d4f-4d6cfa73e206"
+              LastKnownName="CipherMode"
+              LastKnownLocation="Package_1143.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="0ceebfd1-63de-472a-9ef4-5e9f5b1f03bf"
+            name="mInitializationVector"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5c93957f-4455-42a1-a0dd-722374edcc83"
+            name="Decrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="185131da-3c53-47da-9d40-edcbeef53f29"
+            name="Encrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c065db06-6a74-493a-8298-c3cca65fef5d"
+        name="PropagatingCipherBlockChaining "
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="3b781d94-c3fe-4eeb-b8a1-2735bfcd78d2"
+            isSubstitutable="false">
+            <classMoniker
+              Id="032e15cf-14cd-46b7-bfe9-96faa5ac0981"
+              LastKnownName="CipherModeIV"
+              LastKnownLocation="Package_1143.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

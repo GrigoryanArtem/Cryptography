@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Crypto.UI.Resources"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="mSymmetric">Симметричные</v:String>
+    <v:String x:Key="mAsymmetric">Ассиметричные</v:String>
+    <v:String x:Key="mHashFunctions">Хэш функции</v:String>
+    <v:String x:Key="mCopyRight">© 2016 Григорян Артем</v:String>
+    <v:String x:Key="mSettings">Настройки</v:String>
+    <v:String x:Key="mAlgorithm">Алгоритм</v:String>
+    <v:String x:Key="mCipherMode">Режим шифрования</v:String>
+    <v:String x:Key="mGeneratorMode">Режим генерации</v:String>
+    <v:String x:Key="mInputFile">Входной файл</v:String>
+    <v:String x:Key="mOutputFile">Выходной файл</v:String>
+    <v:String x:Key="mKey">Ключ</v:String>
+    <v:String x:Key="mInitializationVector">Вектор инициализации</v:String>
+    <v:String x:Key="mLanguage">Язык</v:String>
+    <v:String x:Key="mInputFilePath">Путь к входному файлу</v:String>
+    <v:String x:Key="mOutputFilePath">Путь к выходному файлу</v:String>
+    <v:String x:Key="mEnterKey">Введите ключ</v:String>
+    <v:String x:Key="mEnterInitializationVector">Введите вектор инициализации</v:String>
+    <v:String x:Key="mTest">Тест</v:String>
+    <v:String x:Key="mEncrypt">Шифровать</v:String>
+    <v:String x:Key="mDecrypt">Расшифровывать</v:String>
+    <v:String x:Key="mGenerateKeys">Генерация ключей</v:String>
+    <v:String x:Key="mPublicKey">Публинчный ключ</v:String>
+    <v:String x:Key="mPrivateKey">Приватный ключ</v:String>
+    <v:String x:Key="mPublicKeyPath">Путь к публиному ключу</v:String>
+    <v:String x:Key="mPrivateKeyPath">Путь к приватному ключу</v:String>
+    <v:String x:Key="mKeyLength">Длина ключа</v:String>
+    <v:String x:Key="mHash">Хешировать</v:String>
+</ResourceDictionary>

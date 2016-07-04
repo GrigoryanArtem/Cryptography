@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="Crypto.UI.Views.Symmetric"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:LocalControls="clr-namespace:Crypto.UI.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Crypto.UI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel
+            LastChildFill="True">
+
+            <WrapPanel
+                DockPanel.Dock="Bottom"
+                Orientation="Horizontal"
+                FlowDirection="RightToLeft">
+                
+                <Button 
+                    Grid.Column="1"
+                    Style="{StaticResource SquareButton}">
+
+                    <TextBlock 
+                        Style="{StaticResource SquareButtonTextBlock}"
+                        Text="{DynamicResource mTest}" />
+                </Button>
+
+                <Button 
+                    Grid.Column="2"
+                    Style="{StaticResource SquareButton}" >
+
+                    <TextBlock 
+                        Style="{StaticResource SquareButtonTextBlock}"
+                        Text="{DynamicResource mDecrypt}" />
+                </Button>
+
+                <Button 
+                    Grid.Column="3"
+                    Style="{StaticResource SquareButton}" >
+
+                    <TextBlock 
+                        Style="{StaticResource SquareButtonTextBlock}"
+                        Text="{DynamicResource mEncrypt}" />
+                </Button>
+            </WrapPanel>
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock 
+                Grid.Row="0" Grid.Column="0"
+                Style="{StaticResource TextBoxTitle}"
+                Text="{DynamicResource mInputFile}" />
+
+                <TextBox 
+                Grid.Row="0" Grid.Column="1"
+                Style="{StaticResource PathTextBox}"
+                Controls:TextBoxHelper.Watermark="{DynamicResource mInputFilePath}"  />
+
+                <TextBlock 
+                Grid.Row="1" Grid.Column="0"
+                Style="{StaticResource TextBoxTitle}"
+                Text="{DynamicResource mOutputFile}" />
+
+                <TextBox 
+                Grid.Row="1" Grid.Column="1"
+                Style="{StaticResource PathTextBox}"
+                Controls:TextBoxHelper.Watermark="{DynamicResource mOutputFilePath}"  />
+
+                <TextBlock 
+                Grid.Row="2" Grid.Column="0"
+                Style="{StaticResource TextBoxTitle}"
+                Text="{DynamicResource mKey}" />
+
+                <TextBox 
+                Grid.Row="2" Grid.Column="1"
+                Style="{StaticResource KeyTextBox}"
+                Controls:TextBoxHelper.Watermark="{DynamicResource mEnterKey}"  />
+
+                <TextBlock 
+                Grid.Row="3" Grid.Column="0"
+                Style="{StaticResource TextBoxTitle}"
+                Text="{DynamicResource mInitializationVector}" />
+
+                <TextBox 
+                Grid.Row="3" Grid.Column="1"
+                Style="{StaticResource KeyTextBox}"
+                Controls:TextBoxHelper.Watermark="{DynamicResource mEnterInitializationVector}"  />
+            </Grid>
+        </DockPanel>
+
+        <Border 
+            Grid.Row="0" Grid.Column="1" >
+
+            <Expander  
+                Style="{StaticResource ExpanderSettings}"
+                Header="{DynamicResource mSettings}" >
+
+                <ScrollViewer 
+                    Style="{StaticResource ScrollViewerSettings}">
+
+                    <StackPanel 
+                        Style="{StaticResource StackPanelSettings}">
+                    
+                        <LocalControls:ComboBoxWithHeader
+                            x:Name="mAlgorithm"
+                            Style="{StaticResource SettingsItem}"
+                            Header="{DynamicResource mAlgorithm}" />
+
+                        <LocalControls:ComboBoxWithHeader
+                            x:Name="mCipherMode"
+                            Style="{StaticResource SettingsItem}"
+                            Header="{DynamicResource mCipherMode}" />
+
+                        <LocalControls:ComboBoxWithHeader
+                            x:Name="mGeneratorMode"
+                            Style="{StaticResource SettingsItem}"
+                            Header="{DynamicResource mGeneratorMode}" />
+                    </StackPanel>
+                </ScrollViewer>
+            </Expander>
+        </Border>
+    </Grid>
+</UserControl>
